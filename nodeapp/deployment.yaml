@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-app
+spec:
+  selector:
+    matchLabels:
+      app: node-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: node-app
+    spec:
+      containers:
+        - name: node-app
+          image: anush28/argo-node-app:1.0
+          ports:
+            - containerPort: 3000
+          resources:
+              requests:
+                cpu: 25m
+                memory: 64Mi
+              limits:
+                cpu: 410m
+                memory: 512Mi
+              
