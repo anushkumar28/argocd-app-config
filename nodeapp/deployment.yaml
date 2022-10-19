@@ -14,14 +14,13 @@ spec:
     spec:
       containers:
         - name: node-app
-          image: anush28/argo-node-app:1.0
+          image: anush28/argo-node-app:3
           ports:
             - containerPort: 3000
           resources:
-              requests:
-                cpu: 25m
-                memory: 64Mi
-              limits:
-                cpu: 410m
-                memory: 512Mi
-              
+            requests:
+              cpu: 25m
+              memory: 64Mi
+            limits:
+              cpu: 410m
+              memory: 512Mi
