@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: node-app
-          image: anush28/argo-node-app:4
+          image: anush28/argo-node-app:5
           ports:
             - containerPort: 3000
           resources:
